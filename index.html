@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Dicionário de HTML</h1>
+        </div>
+        
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#inicializacao">Inicialização</a></li>
+                <li><a href="#estrutura">Estrutura</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+                <li><a href="#multimidia">Multimídia</a></li>
+                <li><a href="#tabelas">Tabelas</a></li>
+                <li><a href="#meta">Meta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="intro">
+      <h2 class="gradient-text">Explore e domine as principais tags do HTML</h2>
+      <p>Um guia completo para você aprender, revisar e dominar as tags essenciais do HTML. Navegue pelas categorias e descubra como utilizar cada tag para construir páginas web de forma eficiente e profissional.</p>
+    </div>
+    <div class="explore-tags">
+        <h3>EXPLORE AS TAGS MAIS DIFÍCEIS</h3>
+        <ul class="tag-list">
+            <li><a href="#template">&lt;template&gt;</a></li>
+            <li><a href="#slot">&lt;slot&gt;</a></li>
+            <li><a href="#iframe">&lt;iframe&gt;</a></li>
+            <li><a href="#picture">&lt;picture&gt;</a></li>
+            <li><a href="#object">&lt;object&gt;</a></li>
+            <li><a href="#details">&lt;details&gt; e &lt;summary&gt;</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <main class="content">
+            <section id="inicializacao" class="tag-section inicial">
+                <h2>Tags de Inicialização</h2>
+                
+                <div class="code-card">
+                    <h3>&lt;!DOCTYPE html&gt;</h3>
+                    <p class="description">A tag &lt;!DOCTYPE html&gt; define o tipo de documento e a versão do HTML.</p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;html&gt;</h3>
+                    <p class="description">A tag &lt;html&gt; é a raiz do documento HTML. Todo o conteúdo da página deve estar dentro dessa tag.</p>
+                    <pre><code class="language-html">&lt;html lang="pt-BR"&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;head&gt;</h3>
+                    <p class="description">A tag &lt;head&gt; contém metadados e links para arquivos externos, como CSS e JavaScript.</p>
+                    <pre><code class="language-html">&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+                </div>
+
+                <div id="template" class="code-card">
+                  <h3>&lt;template&gt;</h3>
+                  <p class="description">A tag &lt;template&gt; define um fragmento de HTML que pode ser reutilizado e instanciado dinamicamente usando JavaScript.</p>
+                  <pre><code class="language-html">&lt;template id="my-template"&gt;
+  &lt;div&gt;
+    &lt;p&gt;Este é um template.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  const template = document.getElementById('my-template');
+  const clone = document.importNode(template.content, true);
+  document.body.appendChild(clone);
+&lt;/script&gt;</code></pre>
+              </div>
+
+                <div class="code-card">
+                    <h3>&lt;meta&gt;</h3>
+                    <p class="description">A tag &lt;meta&gt; fornece metadados sobre o documento, como a codificação de caracteres.</p>
+                    <pre><code class="language-html">&lt;meta charset="UTF-8"&gt;</code></pre>
+                </div>
+
+            </section>
+
+            <section id="estrutura" class="tag-section intermediaria">
+                <h2>Tags de Estrutura</h2>
+                
+                <div class="code-card">
+                    <h3>&lt;header&gt;</h3>
+                    <p class="description">A tag &lt;header&gt; define uma área de cabeçalho na página, geralmente contendo logotipos e navegação.</p>
+                    <pre><code class="language-html">&lt;header&gt;...&lt;/header&gt;</code></pre>
+                </div>
+
+                <div id="nav" class="code-card">
+                    <h3>&lt;nav&gt;</h3>
+                    <p class="description">A tag &lt;nav&gt; define uma área de navegação com links para outras páginas ou seções do site.</p>
+                    <pre><code class="language-html">&lt;nav&gt;...&lt;/nav&gt;</code></pre>
+                </div>
+
+                <div id="main" class="code-card">
+                    <h3>&lt;main&gt;</h3>
+                    <p class="description">A tag &lt;main&gt; é usada para encapsular o conteúdo principal da página, excluindo cabeçalhos e rodapés.</p>
+                    <pre><code class="language-html">&lt;main&gt;...&lt;/main&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;footer&gt;</h3>
+                    <p class="description">A tag &lt;footer&gt; define uma área de rodapé na página, geralmente contendo informações de contato e direitos autorais.</p>
+                    <pre><code class="language-html">&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+                </div>
+
+                <div id="section" class="code-card">
+                    <h3>&lt;section&gt;</h3>
+                    <p class="description">A tag &lt;section&gt; é usada para agrupar conteúdo relacionado em uma seção temática.</p>
+                    <pre><code class="language-html">&lt;section&gt;...&lt;/section&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;article&gt;</h3>
+                    <p class="description">A tag &lt;article&gt; define um conteúdo independente que pode ser distribuído ou reutilizado em outros contextos.</p>
+                    <pre><code class="language-html">&lt;article&gt;...&lt;/article&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;aside&gt;</h3>
+                    <p class="description">A tag &lt;aside&gt; define conteúdo complementar, como barras laterais ou informações adicionais.</p>
+                    <pre><code class="language-html">&lt;aside&gt;...&lt;/aside&gt;</code></pre>
+                </div>
+
+                <div id="slot" class="code-card">
+                    <h3>&lt;slot&gt;</h3>
+                    <p class="description">A tag &lt;slot&gt; é usada em Web Components para definir um espaço onde o conteúdo pode ser inserido.</p>
+                    <pre><code class="language-html">&lt;my-component&gt;
+  &lt;span slot="header"&gt;Cabeçalho&lt;/span&gt;
+  &lt;span&gt;Corpo do conteúdo&lt;/span&gt;
+&lt;/my-component&gt;
+
+&lt;template id="my-component-template"&gt;
+  &lt;div&gt;
+    &lt;slot name="header"&gt;&lt;/slot&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+                </div>
+
+            </section>
+
+            <section id="formularios" class="tag-section avancada">
+                <h2>Tags de Formulários</h2>
+                
+                <div id="form" class="code-card">
+                    <h3>&lt;form&gt;</h3>
+                    <p class="description">A tag &lt;form&gt; cria um formulário para entrada de dados do usuário.</p>
+                    <pre><code class="language-html">&lt;form&gt;
+    &lt;input type="text" name="nome"&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;input&gt;</h3>
+                    <p class="description">A tag &lt;input&gt; cria campos de entrada em um formulário, como caixas de texto e botões de envio.</p>
+                    <pre><code class="language-html">&lt;input type="text" name="nome"&gt;
+&lt;input type="submit" value="Enviar"&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;label&gt;</h3>
+                    <p class="description">A tag &lt;label&gt; define um rótulo para um campo de entrada. O atributo &lt;for&gt; vincula o rótulo ao campo.</p>
+                    <pre><code class="language-html">&lt;label for="nome"&gt;Nome:&lt;/label&gt;
+&lt;input type="text" id="nome" name="nome"&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="multimidia" class="tag-section intermediaria">
+                <h2>Tags de Multimídia</h2>
+                
+                <div class="code-card">
+                    <h3>&lt;img&gt;</h3>
+                    <p class="description">A tag &lt;img&gt; exibe uma imagem na página. O atributo &lt;src&gt; define o caminho da imagem e &lt;alt&gt; fornece uma descrição alternativa.</p>
+                    <pre><code class="language-html">&lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;</code></pre>
+                </div>
+
+                <div class="code-card">
+                    <h3>&lt;audio&gt;</h3>
+                    <p class="description">A tag &lt;audio&gt; incorpora áudio na página. O atributo &lt;controls&gt; adiciona controles de reprodução.</p>
+                    <pre><code class="language-html">&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                </div>
+
+                <div id="picture" class="code-card">
+                    <h3>&lt;picture&gt;</h3>
+                    <p class="description">A tag &lt;picture&gt; fornece uma maneira de exibir diferentes imagens com base em condições, como tamanho da tela.</p>
+                    <pre><code class="language-html">&lt;picture&gt;
+    &lt;source srcset="imagem-small.jpg" media="(max-width: 600px)"&gt;
+    &lt;source srcset="imagem-large.jpg" media="(min-width: 601px)"&gt;
+    &lt;img src="imagem-default.jpg" alt="Descrição da imagem"&gt;
+&lt;/picture&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="tabelas" class="tag-section avancada">
+                <h2>Tags de Tabelas</h2>
+                
+                <div class="code-card">
+                    <h3>&lt;table&gt;</h3>
+                    <p class="description">A tag &lt;table&gt; cria uma tabela. Ela deve conter pelo menos uma linha (&lt;tr&gt;) e pode incluir cabeçalhos (&lt;th&gt;) e células de dados (&lt;td&gt;).</p>
+                    <pre><code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Cabeçalho 1&lt;/th&gt;
+        &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dado 1&lt;/td&gt;
+        &lt;td&gt;Dado 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+
+                <div id="object" class="code-card">
+                    <h3>&lt;object&gt;</h3>
+                    <p class="description">A tag &lt;object&gt; incorpora outros tipos de dados, como imagens ou vídeos, em um documento HTML.</p>
+                    <pre><code class="language-html">&lt;object data="documento.pdf" <br>type="application/pdf" <br> width="600" height="400"&gt;
+    &lt;p&gt;Seu navegador não suporta a visualização de PDFs. <br/>Baixe o documento &lt;a href="documento.pdf"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+                </div>
+
+                <div id="details" class="code-card">
+                    <h3>&lt;details&gt; e &lt;summary&gt;</h3>
+                    <p class="description">A tag &lt;details&gt; cria um controle que o usuário pode abrir ou fechar, e a tag &lt;summary&gt; define o título visível que pode ser clicado.</p>
+                    <pre><code class="language-html">&lt;details&gt;
+    &lt;summary&gt;Mais informações&lt;/summary&gt;
+    &lt;p&gt;Aqui estão mais detalhes.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="meta" class="tag-section inicial">
+                <h2>Tags Meta</h2>
+                
+                <div class="code-card">
+                    <h3>&lt;meta&gt;</h3>
+                    <p class="description">As tags &lt;meta&gt; fornecem metadados sobre o documento. O atributo &lt;charset&gt; define a codificação de caracteres, enquanto &lt;name&gt; pode fornecer outras informações.</p>
+                    <pre><code class="language-html">&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="Descrição do site"&gt;</code></pre>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>
